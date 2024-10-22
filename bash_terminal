@@ -1,0 +1,460 @@
+camper: /project$ mkdir number_guessing_game
+camper: /project$ cd number_guessing_game
+camper: /number_guessing_game$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint:   git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint:   git branch -m <name>
+Initialized empty Git repository in /workspace/project/number_guessing_game/.git/
+camper: /number_guessing_game$ git branch
+camper: /number_guessing_game$  touch number_guess.sh
+camper: /number_guessing_game$ chmod +x number_guess.sh
+camper: /number_guessing_game$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        number_guess.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+camper: /number_guessing_game$ git add .
+camper: /number_guessing_game$ git commit -m "Initial commit"
+[master (root-commit) 33f043f] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100755 number_guess.sh
+camper: /number_guessing_game$ 
+camper: /number_guessing_game$ git branch
+* master
+camper: /number_guessing_game$ 
+camper: /number_guessing_game$ git main
+git: 'main' is not a git command. See 'git --help'.
+
+The most similar command is
+        mailinfo
+camper: /number_guessing_game$  git checkout -b main
+Switched to a new branch 'main'
+camper: /number_guessing_game$ git branch
+* main
+  master
+camper: /number_guessing_game$ man test
+camper: /number_guessing_game$  ./number_guess.sh
+Enter your username:
+Abirami 
+Welcome, Abirami! It looks like this is your first time here.
+Guess the secret number between 1 and 1000:
+500
+It's higher than that, guess again:
+800
+It's higher than that, guess again:
+900
+It's lower than that, guess again:
+850
+It's lower than that, guess again:
+830
+It's lower than that, guess again:
+810
+It's higher than that, guess again:
+820
+It's lower than that, guess again:
+815
+It's lower than that, guess again:
+813
+It's lower than that, guess again:
+811
+You guessed it in 10 tries. The secret number was 811. Nice job!
+camper: /number_guessing_game$  ./number_guess.sh
+Enter your username:
+Abirami
+Welcome back, Abirami! You have played 1 games, and your best game took 10 guesses.
+Guess the secret number between 1 and 1000:
+
+That is not an integer, guess again:
+800
+It's higher than that, guess again:
+900
+It's lower than that, guess again:
+850
+It's higher than that, guess again:
+880
+It's lower than that, guess again:
+870
+It's lower than that, guess again:
+860
+It's lower than that, guess again:
+
+That is not an integer, guess again:
+850
+It's higher than that, guess again:
+855
+It's higher than that, guess again:
+
+That is not an integer, guess again:
+857
+You guessed it in 9 tries. The secret number was 857. Nice job!
+camper: /number_guessing_game$  git add .
+camper: /number_guessing_game$ git commit -m "feat: guessing game"
+[main bd6b3d0] feat: guessing game
+ 1 file changed, 55 insertions(+), 1 deletion(-)
+camper: /number_guessing_game$  git status
+On branch main
+nothing to commit, working tree clean
+camper: /number_guessing_game$  git add .
+camper: /number_guessing_game$ git commit -m "fix: guessing game"
+On branch main
+nothing to commit, working tree clean
+camper: /number_guessing_game$ chmod +x number_guess.sh
+camper: /number_guessing_game$ git add .
+camper: /number_guessing_game$  git commit -m "feat: added user greeting and game
+ logic"
+On branch main
+nothing to commit, working tree clean
+camper: /number_guessing_game$ 
+camper: /number_guessing_game$  git status
+On branch main
+nothing to commit, working tree clean
+camper: /number_guessing_game$ cat .gitignore
+cat: .gitignore: No such file or directory
+camper: /number_guessing_game$ git checkout main
+Already on 'main'
+camper: /number_guessing_game$ git log
+commit bd6b3d04def245796fe942327ea5c5087113fd06 (HEAD -> main)
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:03:40 2024 +0000
+
+    feat: guessing game
+
+commit 33f043fe6639a9b663768da5ba7bf672cc9d92df (master)
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 15:48:11 2024 +0000
+
+    Initial commit
+camper: /number_guessing_game$ 
+camper: /number_guessing_game$ 
+camper: /number_guessing_game$  git status
+On branch main
+nothing to commit, working tree clean
+camper: /number_guessing_game$ 
+camper: /number_guessing_game$ git add .
+camper: /number_guessing_game$ 
+camper: /number_guessing_game$ git commit -m "fix: guessing game"
+On branch main
+nothing to commit, working tree clean
+camper: /number_guessing_game$  chmod +x number_guess.sh
+camper: /number_guessing_game$  git add .
+camper: /number_guessing_game$  git commit -m "fix: guessing game"
+On branch main
+nothing to commit, working tree clean
+camper: /number_guessing_game$ git status
+On branch main
+nothing to commit, working tree clean
+camper: /number_guessing_game$ cat .gitignore
+cat: .gitignore: No such file or directory
+camper: /number_guessing_game$ 
+camper: /number_guessing_game$ cat .gitignore
+cat: .gitignore: No such file or directory
+camper: /number_guessing_game$ git checkout main
+Already on 'main'
+camper: /number_guessing_game$  git log
+commit bd6b3d04def245796fe942327ea5c5087113fd06 (HEAD -> main)
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:03:40 2024 +0000
+
+    feat: guessing game
+
+commit 33f043fe6639a9b663768da5ba7bf672cc9d92df (master)
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 15:48:11 2024 +0000
+
+    Initial commit
+camper: /number_guessing_game$ git status
+On branch main
+nothing to commit, working tree clean
+camper: /number_guessing_game$ git add -p
+No changes.
+camper: /number_guessing_game$ 
+camper: /number_guessing_game$ git add -p
+No changes.
+camper: /number_guessing_game$ git add number_guess.sh
+camper: /number_guessing_game$ 
+camper: /number_guessing_game$ git add number_guess.sh
+camper: /number_guessing_game$ 
+camper: /number_guessing_game$ git add number_guess.sh
+camper: /number_guessing_game$ 
+camper: /number_guessing_game$ git add number_guess.sh
+camper: /number_guessing_game$ git commit -m "feat: add number generation logic"
+On branch main
+nothing to commit, working tree clean
+camper: /number_guessing_game$ git status
+On branch main
+nothing to commit, working tree clean
+camper: /number_guessing_game$ git commit -a -m "commit 1: meaningful message"
+On branch main
+nothing to commit, working tree clean
+camper: /number_guessing_game$ 
+camper: /number_guessing_game$ git status
+On branch main
+nothing to commit, working tree clean
+camper: /number_guessing_game$ git add .
+git commit -m "fix: added database interaction to store game results"
+On branch main
+nothing to commit, working tree clean
+camper: /number_guessing_game$ git status
+On branch main
+nothing to commit, working tree clean
+camper: /number_guessing_game$ cat .gitignore
+cat: .gitignore: No such file or directory
+camper: /number_guessing_game$  git checkout main
+Already on 'main'
+camper: /number_guessing_game$ git log
+commit bd6b3d04def245796fe942327ea5c5087113fd06 (HEAD -> main)
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:03:40 2024 +0000
+
+    feat: guessing game
+
+commit 33f043fe6639a9b663768da5ba7bf672cc9d92df (master)
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 15:48:11 2024 +0000
+
+    Initial commit
+camper: /number_guessing_game$ git status
+On branch main
+nothing to commit, working tree clean
+camper: /number_guessing_game$ git branch
+* main
+  master
+camper: /number_guessing_game$ touch status
+camper: /number_guessing_game$ 
+camper: /number_guessing_game$ chmod +x status
+camper: /number_guessing_game$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        status
+
+nothing added to commit but untracked files present (use "git add" to track)
+camper: /number_guessing_game$  git add .
+camper: /number_guessing_game$  git commit -m "fix: guessing game"
+[main e7db600] fix: guessing game
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100755 status
+camper: /number_guessing_game$ git add .
+camper: /number_guessing_game$  git commit -m "fix: guessing game"
+On branch main
+nothing to commit, working tree clean
+camper: /number_guessing_game$ chmod +x status
+camper: /number_guessing_game$ git status
+On branch main
+nothing to commit, working tree clean
+camper: /number_guessing_game$ git log
+commit e7db6007b47ac6fd09ab34bd14bf1a0b7517a559 (HEAD -> main)
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:33:00 2024 +0000
+
+    fix: guessing game
+
+commit bd6b3d04def245796fe942327ea5c5087113fd06
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:03:40 2024 +0000
+
+    feat: guessing game
+
+commit 33f043fe6639a9b663768da5ba7bf672cc9d92df (master)
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 15:48:11 2024 +0000
+
+    Initial commit
+camper: /number_guessing_game$ touch statuss
+camper: /number_guessing_game$ chmod +x statuss
+camper: /number_guessing_game$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        statuss
+
+nothing added to commit but untracked files present (use "git add" to track)
+camper: /number_guessing_game$ git add .
+camper: /number_guessing_game$  git commit -m "fix: guessing game"
+[main 7a6c2ca] fix: guessing game
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100755 statuss
+camper: /number_guessing_game$ git add .
+camper: /number_guessing_game$  git commit -m "fix: guessing game"
+On branch main
+nothing to commit, working tree clean
+camper: /number_guessing_game$ git log
+commit 7a6c2caf39a594ac861e72d4bdc911f84c181942 (HEAD -> main)
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:36:06 2024 +0000
+
+    fix: guessing game
+
+commit e7db6007b47ac6fd09ab34bd14bf1a0b7517a559
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:33:00 2024 +0000
+
+    fix: guessing game
+
+commit bd6b3d04def245796fe942327ea5c5087113fd06
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:03:40 2024 +0000
+
+    feat: guessing game
+
+commit 33f043fe6639a9b663768da5ba7bf672cc9d92df (master)
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 15:48:11 2024 +0000
+
+    Initial commit
+camper: /number_guessing_game$ touch statusss
+camper: /number_guessing_game$ chmod +x statusss
+camper: /number_guessing_game$ 
+camper: /number_guessing_game$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        statusss
+
+nothing added to commit but untracked files present (use "git add" to track)
+camper: /number_guessing_game$ git add .
+camper: /number_guessing_game$ git commit -m "fix: guessing game"
+[main 7381eef] fix: guessing game
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100755 statusss
+camper: /number_guessing_game$ git log
+commit 7381eefd5b8966b48dac60186c02a37f95cf1c2d (HEAD -> main)
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:38:15 2024 +0000
+
+    fix: guessing game
+
+commit 7a6c2caf39a594ac861e72d4bdc911f84c181942
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:36:06 2024 +0000
+
+    fix: guessing game
+:...skipping...
+commit 7381eefd5b8966b48dac60186c02a37f95cf1c2d (HEAD -> main)
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:38:15 2024 +0000
+
+    fix: guessing game
+
+commit 7a6c2caf39a594ac861e72d4bdc911f84c181942
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:36:06 2024 +0000
+
+    fix: guessing game
+
+:...skipping...
+commit 7381eefd5b8966b48dac60186c02a37f95cf1c2d (HEAD -> main)
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:38:15 2024 +0000
+
+    fix: guessing game
+
+commit 7a6c2caf39a594ac861e72d4bdc911f84c181942
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:36:06 2024 +0000
+
+    fix: guessing game
+
+commit e7db6007b47ac6fd09ab34bd14bf1a0b7517a559
+:...skipping...
+commit 7381eefd5b8966b48dac60186c02a37f95cf1c2d (HEAD -> main)
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:38:15 2024 +0000
+
+    fix: guessing game
+
+commit 7a6c2caf39a594ac861e72d4bdc911f84c181942
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:36:06 2024 +0000
+
+    fix: guessing game
+
+commit e7db6007b47ac6fd09ab34bd14bf1a0b7517a559
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+:...skipping...
+commit 7381eefd5b8966b48dac60186c02a37f95cf1c2d (HEAD -> main)
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:38:15 2024 +0000
+
+    fix: guessing game
+
+commit 7a6c2caf39a594ac861e72d4bdc911f84c181942
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:36:06 2024 +0000
+
+    fix: guessing game
+
+commit e7db6007b47ac6fd09ab34bd14bf1a0b7517a559
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:33:00 2024 +0000
+:...skipping...
+commit 7381eefd5b8966b48dac60186c02a37f95cf1c2d (HEAD -> main)
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:38:15 2024 +0000
+
+    fix: guessing game
+
+commit 7a6c2caf39a594ac861e72d4bdc911f84c181942
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:36:06 2024 +0000
+
+    fix: guessing game
+
+commit e7db6007b47ac6fd09ab34bd14bf1a0b7517a559
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:33:00 2024 +0000
+
+    fix: guessing game
+:...skipping...
+commit 7381eefd5b8966b48dac60186c02a37f95cf1c2d (HEAD -> main)
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:38:15 2024 +0000
+
+commit 7381eefd5b8966b48dac60186c02a37f95cf1c2d (HEAD -> main)
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:38:15 2024 +0000
+commit 7381eefd5b8966b48dac60186c02a37f95cf1c2d (HEAD -> main)
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+commit 7381eefd5b8966b48dac60186c02a37f95cf1c2d (HEAD -> main)
+commit 7381eefd5b8966b48dac60186c02a37f95cf1c2d (HEAD -> main)
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:38:15 2024 +0000
+
+    fix: guessing game
+
+commit 7a6c2caf39a594ac861e72d4bdc911f84c181942
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:36:06 2024 +0000
+
+    fix: guessing game
+
+commit e7db6007b47ac6fd09ab34bd14bf1a0b7517a559
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:33:00 2024 +0000
+
+    fix: guessing game
+
+commit bd6b3d04def245796fe942327ea5c5087113fd06
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 16:03:40 2024 +0000
+
+    feat: guessing game
+
+commit 33f043fe6639a9b663768da5ba7bf672cc9d92df (master)
+Author: abirami107 b <abiramibalasubramaniyan80@gmail.com>
+Date:   Tue Oct 22 15:48:11 2024 +0000
+
+    Initial commit
+camper: /number_guessing_game$ 
